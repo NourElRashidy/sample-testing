@@ -22,7 +22,8 @@ public class PropertyBasedTest {
         for (String aStr : ls) {
             if (null == prev) prev = aStr;
             curr = aStr;
-            assertThat("Elements should be sorted", curr.compareTo(prev)>-1, is(true));
+            assertThat("Elements should be sorted", curr.compareTo(prev)>-1, is(false));
+            prev = curr;
         }
     }
 }
